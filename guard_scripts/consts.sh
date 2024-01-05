@@ -1,4 +1,15 @@
-# /bin/bash
+#!/bin/bash
+
+create_guard_user()
+{
+    # Creation of the guard user
+    if [ ! id "guard" &> /dev/null ]; then
+        sudo useradd guard
+        echo "Created guard user"
+    else
+        echo "guard user was created"
+    fi    
+}
 
 attach_loop_device()
 {
