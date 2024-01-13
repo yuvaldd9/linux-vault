@@ -1,16 +1,5 @@
 #!/bin/bash
 
-create_guard_user()
-{
-    # Creation of the guard user
-    if [ ! id "guard" &> /dev/null ]; then
-        sudo useradd guard
-        echo "Created guard user"
-    else
-        echo "guard user was created"
-    fi    
-}
-
 attach_loop_device()
 {
     # Bound the loop file to loop device
@@ -50,9 +39,9 @@ get_current_loop_device()
 
 install_dependencies()
 {
-    sudo apt update
     sudo apt -y install cryptsetup
     sudo apt -y install fscrypt
+    sudo apt -y install jq
 }
 
 
