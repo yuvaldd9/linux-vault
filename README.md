@@ -88,7 +88,6 @@ sudo vault_guard [options] <function> [arguments]
 - **add_key \<key\> \<value\>**: Add a key-value pair to the JSON file.
 - **read_key \<key\>**: Read the value of a key from the JSON file.
 - **delete_key \<key\>**: Delete a key and its corresponding value from the JSON file.
-- **add_subkey \<key\> \<subkey\> \<subvalue\>**: Add a subkey to an existing key in the JSON file.
 
 ## Examples
 
