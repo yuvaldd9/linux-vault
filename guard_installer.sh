@@ -14,9 +14,9 @@ sudo cp guard_scripts/* $GUARD_SCRIPTS_DIR
 sudo chown -R root:root $GUARD_SCRIPTS_DIR
 sudo chmod -R u+s $GUARD_SCRIPTS_DIR
 
-sudo cp password_guard /bin/
+sudo cp vault_guard /bin/
 
-sudo chown -R root:root /bin/password_guard
-sudo chmod -R u+s /bin/password_guard
+sudo chown -R root:root /bin/vault_guard
+sudo chmod -R u+s /bin/vault_guard
 
 source $GUARD_SCRIPTS_DIR/initiate_system.sh
