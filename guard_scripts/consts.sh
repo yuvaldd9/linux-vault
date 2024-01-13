@@ -1,4 +1,4 @@
-# /bin/bash
+#!/bin/bash
 
 attach_loop_device()
 {
@@ -39,9 +39,9 @@ get_current_loop_device()
 
 install_dependencies()
 {
-    sudo apt update
     sudo apt -y install cryptsetup
     sudo apt -y install fscrypt
+    sudo apt -y install jq
 }
 
 

@@ -1,14 +1,6 @@
-# /bin/bash
+#!/bin/bash
 
-source consts.sh
-
-# Creation of the guard user
-if [ ! id "guard" &> /dev/null ]; then
-    sudo useradd guard
-    echo "Created guard user"
-else
-    echo "guard user was created"
-fi
+source /bin/guard_scripts/consts.sh
 
 # Create the vault if not exists - Loop file
 if [ ! -f "$BLOCK_DIR" ]; then
@@ -42,12 +34,15 @@ if [ "$SYSTEM_INITIATED" -eq 0 ]; then
     sudo fscrypt --quiet setup $GUARD_DIR
     sudo fscrypt --quiet encrypt $ENCRYPTED_FILE_SYSTEM_DIR
 
+
     # Generate the vault file
-    sudo echo "{}" > $VAULT_FILE_PATH
+    echo "{}" | sudo tee $VAULT_FILE_PATH
+
+    # File permissions
+    sudo chown -R root:root $GUARD_DIR
+    sudo chown -R root:root $BLOCK_DIR
+    
 
     close_vault
 
-    # File permissions
-    sudo chown -R guard:guard $GUARD_DIR
-    sudo chown -R guard:guard $BLOCK_DIR
 fi
