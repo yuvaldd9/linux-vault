@@ -32,7 +32,7 @@ To install Linux Vault Guard on your Linux machine, follow these steps:
 1. Clone the project repository:
 
    ```bash
-   git clone https://github.com/your-username/linux-vault-guard.git
+   git clone https://github.com/yuvaldd9/linux-vault-guard.git
    ```
 
 2. Navigate to the project directory:
