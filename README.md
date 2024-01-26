@@ -1,6 +1,6 @@
-# Linux Vault Guard
+# Linux Vault
 
-Linux Vault Guard is a security-focused project that enables users to create an encrypted loop device with layered encryption using dm-crypt/LUKS for block encryption and Google's fscrypt for file system encryption. This project aims to provide a secure and user-friendly solution for creating encrypted vaults on Linux systems.
+Linux Vault is a security-focused project that enables users to create an encrypted loop device with layered encryption using dm-crypt/LUKS for block encryption and Google's fscrypt for file system encryption. This project aims to provide a secure and user-friendly solution for creating encrypted vaults on Linux systems.
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -12,13 +12,13 @@ Linux Vault Guard is a security-focused project that enables users to create an 
 
 ## Introduction
 
-The Linux Vault Guard project allows users to set up a secure vault on their Linux machine by leveraging the power of dm-crypt/LUKS and fscrypt. The project is based on bash scripts that simplify the initialization process, making it accessible to both security enthusiasts and beginners.
+The Linux Vault project allows users to set up a secure vault on their Linux machine by leveraging the power of dm-crypt/LUKS and fscrypt. The project is based on bash scripts that simplify the initialization process, making it accessible to both security enthusiasts and beginners.
 
 ## Security Model
 
 ### Encryption Layers
 
-Linux Vault Guard employs a dual-layer encryption model:
+Linux Vault employs a dual-layer encryption model:
 
 1. **dm-crypt/LUKS (Block Encryption):** This layer encrypts the entire loop device, providing a secure foundation for data protection. It utilizes the well-established LUKS (Linux Unified Key Setup) specification.
 
@@ -27,7 +27,7 @@ Linux Vault Guard employs a dual-layer encryption model:
 
 ## Installation
 
-To install Linux Vault Guard on your Linux machine, follow these steps:
+To install Linux Vault on your Linux machine, follow these steps:
 
 1. Clone the project repository:
 
@@ -38,7 +38,7 @@ To install Linux Vault Guard on your Linux machine, follow these steps:
 2. Navigate to the project directory:
 
    ```bash
-   cd linux-vault-guard
+   cd linux-vault
    ```
 
 3. Run the installer script with sudo privileges:
